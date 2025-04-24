@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("/styles/about-me.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-list {
+  padding-left: 120px;
+  padding-top: 68px;
+  display: flex;
+  gap: 4rem;
+  list-style-type: none;
+  color: red;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.page {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.active {
+  font-weight: 800;
+  color: red;
+}
+
+main {
+  padding-left: 120px;
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+}
+
+.introduce {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 40%; 
+}
+
+.introduce p {
+  text-align: justify;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 3rem;
+}
+
+.title h2 {
+  font-size: 1.5rem;
+  color: red;
+}
+
+.social-links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.social-links li {
+  border: 2px solid red;
+  background-color: rgba(128, 128, 128, 0.454);
+  padding: 1rem 0 1rem 0;
+  width: 70%;
+  text-align: center;
+  border-radius: 12px;
+
+  &:hover {
+    border: 2px solid rgba(128, 128, 128, 0.454);
+    background-color: red;
+    transition-duration: 400ms;
+    transform: scaleX(1.1);
+  }
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.logo {
+  width: 25rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  height: fit-content;
+  position: fixed;
+  right: 15rem;
+  top: 10rem;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem 0 1rem 0;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+footer ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        justify-content: center;
+    }
+
+    .navbar-list {
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 40px; 
+        margin-bottom: 0;
+    }
+    
+    main {
+      height: 100vh;
+        margin-top: 0;
+        flex-direction: column-reverse;
+        padding-left: 0;
+        gap: 1rem;
+    }
+
+    .introduce {
+      justify-content: flex-end;
+      width: 80%;
+      margin-bottom: 8rem;
+    }
+
+    .logo {
+        top: 6.5rem;
+        width: 18rem;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+  .logo {
+   right: 16%;
+  }
+  
+  .introduce {
+    margin-bottom: 3rem;
+  }
+
+  .title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+} 
